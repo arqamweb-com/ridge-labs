@@ -205,3 +205,36 @@ function ridge_labs_register_machine_id_field() {
     ));
 }
 add_action('woocommerce_init', 'ridge_labs_register_machine_id_field');
+
+// ── Render the Machine ID ("Additional information") block ABOVE payment ───────
+// The block-checkout order-location field renders inside the "Additional
+// information" block, whose position is stored in the checkout page content
+// (the database) — so it does NOT travel with the theme. This filter reorders
+// the block markup at render time so Machine ID always sits directly above the
+// payment block (below the phone field), on any site, without a DB edit.
+function ridge_labs_move_machine_id_above_payment($content) {
+    $add_open  = '<!-- wp:woocommerce/checkout-additional-information-block -->';
+    $add_close = '<!-- /wp:woocommerce/checkout-additional-information-block -->';
+    $pay_open  = '<!-- wp:woocommerce/checkout-payment-block -->';
+
+    $start = strpos($content, $add_open);
+    $end   = strpos($content, $add_close);
+    $pay   = strpos($content, $pay_open);
+
+    // Nothing to do if a block is missing or it's already above payment.
+    if ($start === false || $end === false || $pay === false || $start < $pay) {
+        return $content;
+    }
+
+    $end_full   = $end + strlen($add_close);
+    $additional = substr($content, $start, $end_full - $start);
+
+    // Remove from its current spot, then re-insert right before the payment block.
+    $content = substr($content, 0, $start) . substr($content, $end_full);
+    $content = str_replace($pay_open, $additional . "\n\n" . $pay_open, $content);
+
+    return $content;
+}
+// Priority 8 runs before do_blocks() (priority 9) so the reordered markup is
+// what actually gets parsed and rendered.
+add_filter('the_content', 'ridge_labs_move_machine_id_above_payment', 8);

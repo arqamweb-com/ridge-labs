@@ -24,7 +24,8 @@
       "Bash(php -l functions.php)",
       "Bash(/Applications/MAMP/Library/bin/mysql80/bin/mysql -uAbdulrahman -pAbdulrahman --socket=/Applications/MAMP/tmp/mysql/mysql.sock -e 'USE ridge; SELECT ID,post_title FROM wp_posts WHERE post_type='\\\\''product'\\\\'' AND post_status='\\\\''publish'\\\\'' LIMIT 3;')",
       "Bash(/Applications/MAMP/Library/bin/mysql80/bin/mysql -uAbdulrahman -pAbdulrahman --socket=/Applications/MAMP/tmp/mysql/mysql.sock -e 'USE ridge; SELECT ID FROM wp_posts WHERE post_type='\\\\''page'\\\\'' AND post_name='\\\\''checkout'\\\\'' LIMIT 1;')",
-      "Bash(php /private/tmp/claude-501/-Applications-MAMP-htdocs-ridge-wp-content-themes-ridge-labs/a658341c-82d2-40f3-9e30-61e11e23766c/scratchpad/reorder-checkout.php)"
+      "Bash(php /private/tmp/claude-501/-Applications-MAMP-htdocs-ridge-wp-content-themes-ridge-labs/a658341c-82d2-40f3-9e30-61e11e23766c/scratchpad/reorder-checkout.php)",
+      "Bash(php -r ' *)"
     ]
   }
 }
