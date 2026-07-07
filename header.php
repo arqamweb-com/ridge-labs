@@ -27,6 +27,7 @@
       $nav_links = [
         '/'         => 'Home',
         '/product'  => 'Product',
+        '/gallery'  => 'Gallery',
         '/features' => 'Features',
         '/pricing'  => 'Pricing',
         '/about'    => 'About',
