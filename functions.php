@@ -104,6 +104,45 @@ function ridge_labs_handle_contact() {
 add_action('admin_post_nopriv_ridge_contact', 'ridge_labs_handle_contact');
 add_action('admin_post_ridge_contact', 'ridge_labs_handle_contact');
 
+// ── Helper: gallery items from the "gallery" CPT ──────────────────────────────
+// Returns an array of ['full','thumb','caption','alt'] built from the gallery
+// custom post type (image = Featured Image, caption = Title). Ordered by the
+// Page Attributes "Order" field. Returns [] when the CPT has no published items
+// so each caller can supply its own fallback. Shared by the Gallery page and the
+// home "The Product" section.
+function ridge_labs_gallery_items($limit = -1) {
+    $items = array();
+
+    $q = new WP_Query(array(
+        'post_type'      => 'gallery',
+        'post_status'    => 'publish',
+        'posts_per_page' => $limit,
+        'orderby'        => array('menu_order' => 'ASC', 'date' => 'ASC'),
+        'no_found_rows'  => true,
+    ));
+
+    if ($q->have_posts()) {
+        while ($q->have_posts()) {
+            $q->the_post();
+            $thumb_id = get_post_thumbnail_id();
+            if (!$thumb_id) {
+                continue; // skip items without an image
+            }
+            $full  = wp_get_attachment_image_url($thumb_id, 'full');
+            $thumb = wp_get_attachment_image_url($thumb_id, 'large');
+            $items[] = array(
+                'full'    => $full,
+                'thumb'   => $thumb ?: $full,
+                'caption' => get_the_title(),
+                'alt'     => get_post_meta($thumb_id, '_wp_attachment_image_alt', true) ?: get_the_title(),
+            );
+        }
+        wp_reset_postdata();
+    }
+
+    return $items;
+}
+
 // ── Helper: get current page slug for nav active state ────────────────────────
 function ridge_labs_current_slug(): string {
     if (is_front_page()) return '/';

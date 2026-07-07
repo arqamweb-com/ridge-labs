@@ -118,101 +118,66 @@ get_header();
           AutoCad &amp; Civil 3D.</p></div>
     </div>
     <div class="mt-14">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:0ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)"
-                  aria-label="Open image: Culvert Builder running inside AutoCAD Civil 3D">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/Culvert-Builder-Screenshot.jpg"
-                alt="Culvert Builder running inside AutoCAD Civil 3D" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
+        <?php
+        // Images come from the "gallery" CPT (max 6); fall back to the bundled
+        // product screenshots when the CPT has no published items yet.
+        $product_items = ridge_labs_gallery_items(6);
+        if (empty($product_items)) {
+            $product_items = array(
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Culvert-Builder-Screenshot.jpg', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Culvert-Builder-Screenshot.jpg', 'caption' => 'Culvert Builder running inside AutoCAD Civil 3D', 'alt' => 'Culvert Builder running inside AutoCAD Civil 3D'),
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png', 'caption' => 'Culvert Builder generated 3D culvert model', 'alt' => 'Culvert Builder generated 3D culvert model'),
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image008.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image008.png', 'caption' => 'Culvert Builder parametric culvert detail', 'alt' => 'Culvert Builder parametric culvert detail'),
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image003.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image003.png', 'caption' => 'Culvert Builder workflow view', 'alt' => 'Culvert Builder workflow view'),
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image002.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image002.png', 'caption' => 'Culvert Builder model preview', 'alt' => 'Culvert Builder model preview'),
+                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image001.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image001.png', 'caption' => 'Culvert Builder model overview', 'alt' => 'Culvert Builder model overview'),
+            );
+        }
+        ?>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+            <?php foreach ($product_items as $index => $item):
+                $delay = ($index % 3) * 80; ?>
+                <div
+                        class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
+                        style="transition-delay:<?php echo (int)$delay; ?>ms">
+                    <button type="button"
+                            class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                            style="box-shadow:0 6px 20px rgba(0,0,0,0.05)"
+                            data-gallery-item
+                            data-full="<?php echo esc_url($item['full']); ?>"
+                            data-caption="<?php echo esc_attr($item['caption']); ?>"
+                            aria-label="<?php echo esc_attr('Open image: ' . $item['caption']); ?>">
+                        <div class="aspect-[4/3] w-full overflow-hidden"><img
+                                    src="<?php echo esc_url($item['thumb']); ?>"
+                                    alt="<?php echo esc_attr($item['alt']); ?>" loading="lazy"
+                                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]">
+                        </div>
+                        <div
+                                class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
+                    </button>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:80ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)"
-                  aria-label="Open image: Culvert Builder generated 3D culvert model">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png"
-                alt="Culvert Builder generated 3D culvert model" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
-        </div>
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:160ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)"
-                  aria-label="Open image: Culvert Builder parametric culvert detail">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/image008.png"
-                alt="Culvert Builder parametric culvert detail" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
-        </div>
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:240ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)" aria-label="Open image: Culvert Builder workflow view">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/image003.png"
-                alt="Culvert Builder workflow view" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
-        </div>
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:320ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)" aria-label="Open image: Culvert Builder model preview">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/image002.png"
-                alt="Culvert Builder model preview" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
-        </div>
-        <div
-          class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
-          style="transition-delay:400ms">
-          <button type="button"
-                  class="group relative w-full overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
-                  style="box-shadow:0 6px 20px rgba(0,0,0,0.05)"
-                  aria-label="Open image: Culvert Builder model overview">
-            <div class="aspect-[4/3] w-full overflow-hidden"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/image001.png"
-                alt="Culvert Builder model overview" loading="lazy"
-                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"></div>
-            <div
-              class="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.03] transition-colors duration-500"></div>
-          </button>
-        </div>
-      </div>
     </div>
+      <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-100 translate-y-0 blur-0"
+           style="transition-delay: 120ms;">
+          <div class="mt-12 flex justify-center">
+              <a href="<?php echo home_url('/gallery'); ?>"
+                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 glass text-foreground hover:bg-background hover:border-primary/40 transition-all duration-300 h-14 px-9 text-base rounded-full group">View
+                  Full Gallery
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       class="lucide lucide-arrow-right ml-1 transition-transform group-hover:translate-x-1"
+                       aria-hidden="true">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+              </a>
+          </div>
+      </div>
   </div>
 </section>
 <div aria-hidden="true" class="mx-auto max-w-7xl px-4 sm:px-6">
-  <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"></div>
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"></div>
 </div>
 <section id="video" class="relative py-24 sm:py-32">
   <div class="absolute inset-0 pointer-events-none opacity-30"
@@ -243,6 +208,7 @@ get_header();
           style="box-shadow:0 10px 30px rgba(0,0,0,0.05)">
           <div class="relative aspect-video w-full bg-black">
             <button type="button" aria-label="Play Culvert Builder demo"
+                    data-video-play data-video-id="CoxCKTx0u6o"
                     class="absolute inset-0 h-full w-full group/play"><img
                 src="https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png"
                 alt="Culvert Builder demo preview"
@@ -1285,5 +1251,7 @@ get_header();
     </div>
   </div>
 </section>
+
+<?php get_template_part('template-parts/gallery-lightbox'); ?>
 
 <?php get_footer(); ?>

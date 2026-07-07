@@ -315,6 +315,95 @@
     }
   }
 
+  // ── Product Demo video (click poster → embed YouTube, autoplay) ──
+  document.querySelectorAll('[data-video-play]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-video-id');
+      if (!id) return;
+      const holder = btn.closest('.aspect-video') || btn.parentElement;
+      const iframe = document.createElement('iframe');
+      iframe.src =
+        'https://www.youtube-nocookie.com/embed/' + id +
+        '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      iframe.title = btn.getAttribute('aria-label') || 'Video';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute(
+        'allow',
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      );
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.style.cssText =
+        'position:absolute;inset:0;width:100%;height:100%;border:0;';
+      holder.innerHTML = '';
+      holder.appendChild(iframe);
+    });
+  });
+
+  // ── Gallery Lightbox ─────────────────────────────────────────
+  (function () {
+    const lightbox = document.getElementById('gallery-lightbox');
+    const triggers = Array.from(document.querySelectorAll('[data-gallery-item]'));
+    if (!lightbox || !triggers.length) return;
+
+    const imgEl     = document.getElementById('gallery-lightbox-img');
+    const captionEl = document.getElementById('gallery-lightbox-caption');
+    const btnClose  = lightbox.querySelector('[data-lightbox-close]');
+    const btnPrev   = lightbox.querySelector('[data-lightbox-prev]');
+    const btnNext   = lightbox.querySelector('[data-lightbox-next]');
+
+    const items = triggers.map((t) => ({
+      full:    t.getAttribute('data-full'),
+      caption: t.getAttribute('data-caption') || '',
+    }));
+    const total = items.length;
+    let current = 0;
+
+    function render() {
+      const item = items[current];
+      if (!item) return;
+      imgEl.src = item.full;
+      imgEl.alt = item.caption;
+      captionEl.textContent =
+        (current + 1) + ' / ' + total + (item.caption ? ' — ' + item.caption : '');
+    }
+
+    function open(index) {
+      current = index;
+      render();
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      btnClose && btnClose.focus();
+    }
+
+    function close() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+      imgEl.src = '';
+    }
+
+    const next = () => { current = (current + 1) % total; render(); };
+    const prev = () => { current = (current - 1 + total) % total; render(); };
+
+    triggers.forEach((t, i) =>
+      t.addEventListener('click', () => open(i))
+    );
+    btnClose && btnClose.addEventListener('click', close);
+    btnNext && btnNext.addEventListener('click', next);
+    btnPrev && btnPrev.addEventListener('click', prev);
+
+    // Click on the dim backdrop (not the image/controls) closes it.
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape')     close();
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft')  prev();
+    });
+  })();
+
   // ── FAQ / Accordion (no Radix needed) ────────────────────────
   document.querySelectorAll('[data-accordion-trigger]').forEach((btn) => {
     btn.addEventListener('click', () => {

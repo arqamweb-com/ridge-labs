@@ -7,7 +7,19 @@
       "Bash(grep -oE '\\(^| \\)glow\\( |$\\)|\"glow | glow\"')",
       "Bash(grep -oE '[^{},]*col-start-2[^{]*\\\\{' assets/css/styles.css)",
       "Bash(awk 'NR==288{print NR\": \"$0} NR==8{print NR\": \"$0}' page-thank.php)",
-      "Bash(perl -0pi -e 's/Step\\\\s*<!-- -->\\(\\\\d\\)<!-- --> — <!-- -->/Step $1 — /g' template-parts/thank-you-content.php)"
+      "Bash(perl -0pi -e 's/Step\\\\s*<!-- -->\\(\\\\d\\)<!-- --> — <!-- -->/Step $1 — /g' template-parts/thank-you-content.php)",
+      "Bash(/Applications/MAMP/Library/bin/mysql* -uroot -proot -h127.0.0.1 -P8889 -e \"USE ridge; SELECT option_name,option_value FROM wp_options WHERE option_name IN \\('siteurl','home'\\);\")",
+      "Bash(/Applications/MAMP/Library/bin/mysql80/bin/mysql -uAbdulrahman -pAbdulrahman --socket=/Applications/MAMP/tmp/mysql/mysql.sock -e 'USE ridge; SELECT option_value FROM wp_options WHERE option_name='\\\\''siteurl'\\\\''; SELECT ID,post_status FROM wp_posts WHERE post_type='\\\\''page'\\\\'' AND post_name='\\\\''gallery'\\\\''; SELECT COUNT\\(*\\) AS gallery_items FROM wp_posts WHERE post_type='\\\\''gallery'\\\\'' AND post_status='\\\\''publish'\\\\'';')",
+      "Bash(/Applications/MAMP/Library/bin/mysql80/bin/mysql -uAbdulrahman -pAbdulrahman --socket=/Applications/MAMP/tmp/mysql/mysql.sock -e 'USE ridge; SELECT meta_value AS template FROM wp_postmeta WHERE post_id=66 AND meta_key='\\\\''_wp_page_template'\\\\''; SELECT DISTINCT post_type FROM wp_posts WHERE post_type IN \\('\\\\''gallery'\\\\''\\);')",
+      "Bash(/Applications/MAMP/bin/php/php*/bin/php -l page-gallery.php)",
+      "Bash(node -c assets/js/theme.js)",
+      "Bash(php *)",
+      "Bash(grep -E \"gitignore|.git$\")",
+      "Bash(pkill -f \"tailwindcss.*--watch\")",
+      "Bash(pkill -f \"tail -f /dev/null\")",
+      "Bash(php -l front-page.php)",
+      "Bash(python3 -)",
+      "Bash(php -l page-gallery.php)"
     ]
   }
 }
