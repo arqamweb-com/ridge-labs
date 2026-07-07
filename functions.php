@@ -182,3 +182,26 @@ function ridge_labs_hide_extra_fields_locale($locale) {
     return $locale;
 }
 add_filter('woocommerce_get_country_locale', 'ridge_labs_hide_extra_fields_locale');
+
+// ── Custom checkout field: Machine ID ─────────────────────────────────────────
+// Registered with WooCommerce's block-checkout additional-fields API (WC 8.9+).
+// Shows in the "Additional information" section, is required, and is saved to the
+// order + shown automatically in the admin order screen and order emails.
+function ridge_labs_register_machine_id_field() {
+    if (!function_exists('woocommerce_register_additional_checkout_field')) {
+        return; // older WooCommerce without the block-checkout fields API
+    }
+
+    woocommerce_register_additional_checkout_field(array(
+        'id'         => 'ridge-labs/machine-id',
+        'label'      => __('Machine ID', 'ridge-labs'),
+        'location'   => 'order',
+        'type'       => 'text',
+        'required'   => true,
+        'attributes' => array(
+            'autocomplete' => 'off',
+            'placeholder'  => __('Enter your Machine ID', 'ridge-labs'),
+        ),
+    ));
+}
+add_action('woocommerce_init', 'ridge_labs_register_machine_id_field');
