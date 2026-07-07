@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(grep -oE '\\\\.flex[ {,:]' styles.css)",
+      "Bash(grep -oE '\\(^| \\)glow\\( |$\\)|\"glow | glow\"')",
+      "Bash(grep -oE '[^{},]*col-start-2[^{]*\\\\{' assets/css/styles.css)",
+      "Bash(awk 'NR==288{print NR\": \"$0} NR==8{print NR\": \"$0}' page-thank.php)",
+      "Bash(perl -0pi -e 's/Step\\\\s*<!-- -->\\(\\\\d\\)<!-- --> — <!-- -->/Step $1 — /g' template-parts/thank-you-content.php)"
+    ]
+  }
+}
