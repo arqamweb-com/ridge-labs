@@ -206,6 +206,24 @@ function ridge_labs_register_machine_id_field() {
 }
 add_action('woocommerce_init', 'ridge_labs_register_machine_id_field');
 
+// ── Validate the Machine ID field ─────────────────────────────────────────────
+// Must be exactly 64 characters, letters (A–Z, a–z) and digits (0–9) only.
+// Runs server-side via WooCommerce's block-checkout additional-field validation
+// hook, so it's enforced no matter what the client sends.
+function ridge_labs_validate_machine_id_field($errors, $field_key, $field_value) {
+    if ('ridge-labs/machine-id' !== $field_key) {
+        return;
+    }
+
+    if (!preg_match('/^[A-Za-z0-9]{64}$/', (string) $field_value)) {
+        $errors->add(
+            'ridge_labs_invalid_machine_id',
+            __('Machine ID must be exactly 64 characters, using only letters and numbers.', 'ridge-labs')
+        );
+    }
+}
+add_action('woocommerce_validate_additional_field', 'ridge_labs_validate_machine_id_field', 10, 3);
+
 // ── Render the Machine ID ("Additional information") block ABOVE payment ───────
 // The block-checkout order-location field renders inside the "Additional
 // information" block, whose position is stored in the checkout page content
