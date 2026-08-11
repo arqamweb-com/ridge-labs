@@ -5,78 +5,52 @@
 get_header();
 ?>
 
-<section class="relative pt-40 pb-20 sm:pt-48 sm:pb-24 overflow-hidden"><div class="absolute inset-0 pointer-events-none opacity-60" style="background:radial-gradient(ellipse 70% 50% at 50% 0%, color-mix(in oklab, var(--primary) 22%, transparent) 0%, transparent 65%)"></div><div class="absolute inset-0 grid-bg opacity-[0.05] radial-fade pointer-events-none"></div><div class="relative mx-auto max-w-5xl px-4 sm:px-6 text-center"><div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-6"><a href="/" class="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house h-3.5 w-3.5" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></path></svg><span>Home</span></a><span class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-3.5 w-3.5 opacity-60" aria-hidden="true"><path d="m9 18 6-6-6-6"/></path></svg><span class="text-foreground/80 font-medium">Privacy Policy</span></span></nav></div><div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><div class="text-xs uppercase tracking-[0.25em] text-primary-glow font-medium mb-5">Legal</div></div><div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:80ms"><h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.02] text-gradient">Privacy Policy</h1></div><div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:160ms"><p class="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Effective date: August 6, 2026. This policy explains what data we collect, how we collect and use it, and the third parties we share it with.</p></div></div></section><div aria-hidden="true" class="mx-auto max-w-7xl px-4 sm:px-6"><div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"></div></div><section class="relative py-20"><div class="mx-auto max-w-3xl px-4 sm:px-6 space-y-12">
+<section class="relative pt-40 pb-20 sm:pt-48 sm:pb-24 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-60"
+         style="background:radial-gradient(ellipse 70% 50% at 50% 0%, color-mix(in oklab, var(--primary) 22%, transparent) 0%, transparent 65%)"></div>
+    <div class="absolute inset-0 grid-bg opacity-[0.05] radial-fade pointer-events-none"></div>
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 text-center">
+        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
+             style="transition-delay:0ms">
+            <nav aria-label="Breadcrumb"
+                 class="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-6"><a href="/"
+                                                                                                      class="inline-flex items-center gap-1.5 hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-house h-3.5 w-3.5" aria-hidden="true">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                        </path>
+                        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        </path></svg>
+                    <span>Home</span></a><span class="inline-flex items-center gap-2"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right h-3.5 w-3.5 opacity-60" aria-hidden="true"><path
+                                d="m9 18 6-6-6-6"/>
+                        </path></svg><span class="text-foreground/80 font-medium">Privacy Policy</span></span></nav>
+        </div>
+        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
+             style="transition-delay:0ms">
+            <div class="text-xs uppercase tracking-[0.25em] text-primary-glow font-medium mb-5">Legal</div>
+        </div>
+        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
+             style="transition-delay:80ms"><h1
+                    class="font-display text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[-0.03em] leading-[1.02] text-gradient">
+                Privacy Policy</h1></div>
+        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
+             style="transition-delay:160ms"><p
+                    class="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Effective date: August
+                6, 2026. This policy explains what data we collect, how we collect and use it, and the third parties we
+                share it with.</p></div>
+    </div>
+</section>
 
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><div><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">Ridge Labs (&ldquo;Ridge Labs&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) develops and sells software plugins for Autodesk products through our website, ridge-labs.net (the &ldquo;Site&rdquo;). This Privacy Policy describes the data we collect through our Site and our plugins (the &ldquo;Services&rdquo;), how we collect and use that data, the third parties we share it with and why, how long we keep it, and the rights you have over it.</p></div></div>
+<div aria-hidden="true" class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"></div>
+</div>
 
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:60ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">1. Information We Collect</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">We collect the following categories of information:
-
-                    &bull; <strong class="text-foreground font-medium">Account and contact information.</strong> When you create an account, purchase a license, or contact us, we collect your name, email address, company name, and country.
-                    &bull; <strong class="text-foreground font-medium">License and activation data.</strong> Information needed to issue, activate, and manage your plugin license, including your license key, license type, purchase date, and activation status.
-                    &bull; <strong class="text-foreground font-medium">Hashed machine identifier.</strong> To bind a license to a specific computer, our plugin computes a SHA-256 hash of the machine&rsquo;s BIOS serial number. This hash is computed locally on your device, is one-way and non-reversible, and cannot be used to recover the underlying serial number. The plugin does not transmit this hash automatically; you send it to us yourself as part of the activation process (see Section 2).
-                    &bull; <strong class="text-foreground font-medium">Payment information.</strong> Payments are processed by our payment provider, Kashier. We do not collect or store your full card details; we receive payment confirmation and basic transaction details from Kashier.
-                    &bull; <strong class="text-foreground font-medium">Usage and diagnostic logs.</strong> Our plugins may generate local log files to help diagnose problems. These logs are collected by us only if you choose to share them with our support team.
-                    &bull; <strong class="text-foreground font-medium">Website analytics.</strong> Our Site uses Google Analytics, which collects information such as pages visited, approximate location, device and browser type, and referral source through cookies and similar technologies.
-                    &bull; <strong class="text-foreground font-medium">Support correspondence.</strong> When you contact us by email or other channels, we collect the contents of your messages and any attachments you provide.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:120ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">2. How We Collect Information and How We Use It</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line"><strong class="text-foreground font-medium">How we collect it.</strong> We collect information directly from you when you fill in forms on the Site, make a purchase, or correspond with our support team. The hashed machine identifier is generated locally on your computer by the plugin and is sent to us manually by you (for example, by email or through the activation form) &mdash; it is not transmitted automatically by the plugin. Website analytics data is collected via Google Analytics cookies when you browse the Site. Payment confirmations are sent to us by Kashier when you complete a purchase.
-
-                    <strong class="text-foreground font-medium">How we use it.</strong> We use the information described above to: create and manage your account; process payments and deliver license keys; activate licenses and bind them to your machine using the hashed machine identifier; verify license validity and prevent unauthorized use; provide technical support and respond to your requests; diagnose and fix problems in our plugins (where you have shared diagnostic logs); understand how our Site is used and improve our Services; and comply with legal, tax, and accounting obligations.
-
-                    We do not sell your personal data, and we do not use your data for third-party advertising.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:180ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">3. Third Parties We Share Data With</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">We share personal data only with the service providers below, only for the purposes stated, and only to the extent necessary:
-
-                    &bull; <strong class="text-foreground font-medium">Kashier</strong> &mdash; payment processing. Kashier receives the information needed to process your payment and sends us confirmation of completed transactions.
-                    &bull; <strong class="text-foreground font-medium">Hostinger</strong> &mdash; website hosting, DNS, and email services. Data stored on or transmitted through our Site and email accounts is processed on Hostinger infrastructure.
-                    &bull; <strong class="text-foreground font-medium">Google Analytics (Google LLC)</strong> &mdash; website analytics. Google processes usage data collected from the Site through cookies on our behalf.
-
-                    We do not share your data with any other third parties, except where required by law or to protect our legal rights.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:240ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">4. Data Retention</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">We keep personal data only as long as needed for the purposes described above:
-
-                    &bull; <strong class="text-foreground font-medium">License and billing records:</strong> for the duration of your active license, plus 7 years thereafter to meet legal, tax, and accounting requirements.
-                    &bull; <strong class="text-foreground font-medium">Hashed machine identifiers:</strong> for the duration of your active license; if the license expires and is not renewed, the hash is deleted within 12 months after expiry.
-                    &bull; <strong class="text-foreground font-medium">Support emails and correspondence:</strong> 3 years from the date of the last communication.
-                    &bull; <strong class="text-foreground font-medium">Website analytics data:</strong> retained according to Google Analytics&rsquo; default retention settings (approximately 14 months).</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">5. International Data Transfers</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">Ridge Labs is based in Egypt. Depending on the service providers involved, your data may be processed in Egypt, the United States, or the European Union (for example, on Hostinger hosting infrastructure or Google Analytics servers). Where personal data is transferred internationally, we rely on appropriate safeguards, such as our providers&rsquo; standard contractual clauses and equivalent contractual protections, to ensure your data remains protected.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:60ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">6. Your Rights under GDPR (EU/UK)</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">If you are located in the European Economic Area or the United Kingdom, you have the following rights under the General Data Protection Regulation (GDPR) and UK GDPR:
-
-                    &bull; the right to <strong class="text-foreground font-medium">access</strong> the personal data we hold about you;
-                    &bull; the right to <strong class="text-foreground font-medium">rectification</strong> of inaccurate or incomplete data;
-                    &bull; the right to <strong class="text-foreground font-medium">erasure</strong> (&ldquo;right to be forgotten&rdquo;), subject to our legal retention obligations;
-                    &bull; the right to <strong class="text-foreground font-medium">restrict processing</strong> in certain circumstances;
-                    &bull; the right to <strong class="text-foreground font-medium">data portability</strong> &mdash; receiving your data in a structured, commonly used, machine-readable format;
-                    &bull; the right to <strong class="text-foreground font-medium">object</strong> to processing based on legitimate interests;
-                    &bull; the right to <strong class="text-foreground font-medium">withdraw consent</strong> at any time, where processing is based on consent, without affecting the lawfulness of prior processing; and
-                    &bull; the right to <strong class="text-foreground font-medium">lodge a complaint</strong> with your local data protection supervisory authority.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:120ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">7. Your Rights under CCPA/CPRA (California)</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA):
-
-                    &bull; the right to <strong class="text-foreground font-medium">know</strong> what personal information we collect, use, and disclose about you;
-                    &bull; the right to <strong class="text-foreground font-medium">access</strong> a copy of your personal information;
-                    &bull; the right to <strong class="text-foreground font-medium">correct</strong> inaccurate personal information;
-                    &bull; the right to <strong class="text-foreground font-medium">delete</strong> your personal information, subject to legal exceptions;
-                    &bull; the right to <strong class="text-foreground font-medium">opt out of the sale or sharing</strong> of personal information &mdash; note that Ridge Labs does not sell or share personal information as defined by the CCPA/CPRA; and
-                    &bull; the right to <strong class="text-foreground font-medium">non-discrimination</strong> for exercising any of these rights.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:180ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">8. How to Exercise Your Rights</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">To exercise any of the rights described above, email us at info@ridge-labs.net. We may need to verify your identity before acting on your request. We will respond within 30 days of receiving your request.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:240ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">9. Children&rsquo;s Privacy</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">Our Services are not directed at anyone under the age of 18, and we do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us at info@ridge-labs.net and we will delete it.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">10. Data Security</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">We use industry-standard technical and organizational safeguards to protect your personal data against unauthorized access, alteration, disclosure, or destruction, including encrypted connections (HTTPS), access controls, and secure hosting infrastructure. No method of transmission or storage is completely secure, but we work to protect your data using measures appropriate to the risk.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:60ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">11. Changes to This Policy</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">We may update this Privacy Policy from time to time. When we do, we will post the revised version on this page and update the effective date at the top. Material changes will be communicated through the Site or by email where appropriate. We encourage you to review this page periodically.</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:120ms"><div><h2 class="font-display text-2xl font-semibold text-foreground mb-4">12. Contact</h2><p class="text-base text-muted-foreground leading-relaxed whitespace-pre-line">If you have any questions about this Privacy Policy or how we handle your data, contact us at:
-
-                    <strong class="text-foreground font-medium">Email:</strong> info@ridge-labs.net
-                    <strong class="text-foreground font-medium">Website:</strong> ridge-labs.net</p></div></div>
-
-        <div class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]" style="transition-delay:0ms"><div class="pt-8 text-sm text-muted-foreground/70 border-t border-border">Effective date: <!-- -->August 6, 2026</div></div>
-
-    </div></section>
+<div>
+    <?php the_content(); ?>
+</div>
 
 <?php get_footer(); ?>
