@@ -30,7 +30,7 @@ get_header();
         class="transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform opacity-0 translate-y-8 blur-[2px]"
         style="transition-delay:30ms">
         <div class="pointer-events-auto flex justify-center mb-6"><img
-            src="https://www.arqamweb.com/wp-content/uploads/2026/05/Culver-Builder-Logo.png" alt="Culvert Builder logo"
+            src="<?php echo esc_url(ridge_labs_img('Culver-Builder-Logo.png')); ?>" alt="Culvert Builder logo"
             class="h-20 sm:h-24 w-auto drop-shadow-[0_8px_24px_color-mix(in_oklab,var(--primary)_35%,transparent)]"
             loading="eager"></div>
       </div>
@@ -124,12 +124,12 @@ get_header();
         $product_items = ridge_labs_gallery_items(6);
         if (empty($product_items)) {
             $product_items = array(
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Culvert-Builder-Screenshot.jpg', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Culvert-Builder-Screenshot.jpg', 'caption' => 'Culvert Builder running inside AutoCAD Civil 3D', 'alt' => 'Culvert Builder running inside AutoCAD Civil 3D'),
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png', 'caption' => 'Culvert Builder generated 3D culvert model', 'alt' => 'Culvert Builder generated 3D culvert model'),
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image008.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image008.png', 'caption' => 'Culvert Builder parametric culvert detail', 'alt' => 'Culvert Builder parametric culvert detail'),
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image003.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image003.png', 'caption' => 'Culvert Builder workflow view', 'alt' => 'Culvert Builder workflow view'),
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image002.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image002.png', 'caption' => 'Culvert Builder model preview', 'alt' => 'Culvert Builder model preview'),
-                    array('full' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image001.png', 'thumb' => 'https://www.arqamweb.com/wp-content/uploads/2026/04/image001.png', 'caption' => 'Culvert Builder model overview', 'alt' => 'Culvert Builder model overview'),
+                    array('full' => ridge_labs_img('Culvert-Builder-Screenshot.jpg'), 'thumb' => ridge_labs_img('Culvert-Builder-Screenshot.jpg'), 'caption' => 'Culvert Builder running inside AutoCAD Civil 3D', 'alt' => 'Culvert Builder running inside AutoCAD Civil 3D'),
+                    array('full' => ridge_labs_img('Screenshot-2026-04-20-at-8.42.00-PM.png'), 'thumb' => ridge_labs_img('Screenshot-2026-04-20-at-8.42.00-PM.png'), 'caption' => 'Culvert Builder generated 3D culvert model', 'alt' => 'Culvert Builder generated 3D culvert model'),
+                    array('full' => ridge_labs_img('image008.png'), 'thumb' => ridge_labs_img('image008.png'), 'caption' => 'Culvert Builder parametric culvert detail', 'alt' => 'Culvert Builder parametric culvert detail'),
+                    array('full' => ridge_labs_img('image003.png'), 'thumb' => ridge_labs_img('image003.png'), 'caption' => 'Culvert Builder workflow view', 'alt' => 'Culvert Builder workflow view'),
+                    array('full' => ridge_labs_img('image002.png'), 'thumb' => ridge_labs_img('image002.png'), 'caption' => 'Culvert Builder model preview', 'alt' => 'Culvert Builder model preview'),
+                    array('full' => ridge_labs_img('image001.png'), 'thumb' => ridge_labs_img('image001.png'), 'caption' => 'Culvert Builder model overview', 'alt' => 'Culvert Builder model overview'),
             );
         }
         ?>
@@ -210,7 +210,7 @@ get_header();
             <button type="button" aria-label="Play Culvert Builder demo"
                     data-video-play data-video-id="CoxCKTx0u6o"
                     class="absolute inset-0 h-full w-full group/play"><img
-                src="https://www.arqamweb.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-8.42.00-PM.png"
+                src="<?php echo esc_url(ridge_labs_img('Screenshot-2026-04-20-at-8.42.00-PM.png')); ?>"
                 alt="Culvert Builder demo preview"
                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/play:scale-[1.03]"
                 loading="lazy">
@@ -1019,7 +1019,7 @@ get_header();
             <div class="relative h-36 w-36 sm:h-44 sm:w-44 shrink-0 mx-auto lg:mx-0">
               <div class="relative h-full w-full rounded-full overflow-hidden border border-border"
                    style="box-shadow:0 6px 20px rgba(0,0,0,0.06)"><img
-                  src="https://www.arqamweb.com/wp-content/uploads/2026/05/Eng-Tarek-Hamouda-Ridge-Labs-CEO.jpg"
+                  src="<?php echo esc_url(ridge_labs_img('Eng-Tarek-Hamouda-Ridge-Labs-CEO.jpg')); ?>"
                   alt="Tarek Hamouda" class="h-full w-full object-cover"></div>
             </div>
             <div class="text-center lg:text-left">

@@ -143,6 +143,13 @@ function ridge_labs_gallery_items($limit = -1) {
     return $items;
 }
 
+// ── Helper: theme image URL ───────────────────────────────────────────────────
+// Images live in the theme at assets/images/ so the theme stays self-contained
+// and never depends on an external media host.
+function ridge_labs_img(string $file): string {
+    return get_template_directory_uri() . '/assets/images/' . ltrim($file, '/');
+}
+
 // ── Helper: get current page slug for nav active state ────────────────────────
 function ridge_labs_current_slug(): string {
     if (is_front_page()) return '/';

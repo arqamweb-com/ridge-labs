@@ -17,7 +17,7 @@
     <div class="flex items-center justify-between rounded-full px-4 sm:px-6 py-3 transition-all duration-500 bg-background/70 backdrop-blur-xl border border-border">
 
       <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-2.5 group">
-        <img src="https://www.arqamweb.com/wp-content/uploads/2026/04/Logo-Web-1.png"
+        <img src="<?php echo esc_url(ridge_labs_img('Logo-Web-1.png')); ?>"
              alt="Ridge Labs"
              class="h-11 sm:h-12 w-auto transition-transform duration-500 group-hover:scale-105"/>
       </a>

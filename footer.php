@@ -6,7 +6,7 @@
 
       <div class="flex items-center gap-4">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-          <img src="https://www.arqamweb.com/wp-content/uploads/2026/04/Logo-Web-1.png"
+          <img src="<?php echo esc_url(ridge_labs_img('Logo-Web-1.png')); ?>"
                alt="Ridge Labs"
                class="h-10 w-auto opacity-95 hover:opacity-100 transition-opacity"/>
         </a>
