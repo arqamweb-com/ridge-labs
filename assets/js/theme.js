@@ -266,9 +266,9 @@
 
   // ── Animated Counter ──────────────────────────────────────────
   function animateCount(el) {
-    const target = parseFloat(el.dataset.target || el.textContent);
-    const suffix = el.dataset.suffix || el.textContent.replace(/[\d.]/g, '');
-    const isFloat = String(target).includes('.');
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const isFloat = String(el.dataset.target).includes('.');
     const duration = 1800;
     const start = performance.now();
 
@@ -288,14 +288,28 @@
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateCount(entry.target);
-            counterIO.unobserve(entry.target);
+            const el = entry.target;
+            counterIO.unobserve(el);
+            const delay = parseInt(
+              (el.closest('[style*="transition-delay"]')?.style.transitionDelay) || '0',
+              10
+            ) || 0;
+            setTimeout(() => animateCount(el), delay);
           }
         });
       },
       { threshold: 0.5 }
     );
-    counterEls.forEach((el) => counterIO.observe(el));
+    counterEls.forEach((el) => {
+      // Remember the final value, then start the display from zero.
+      if (!el.dataset.target) {
+        el.dataset.target = parseFloat(el.textContent);
+        el.dataset.suffix = el.dataset.suffix || el.textContent.replace(/[\d.,]/g, '');
+      }
+      const zero = String(el.dataset.target).includes('.') ? '0.0' : '0';
+      el.textContent = zero + (el.dataset.suffix || '');
+      counterIO.observe(el);
+    });
   }
 
   // ── Contact form feedback ─────────────────────────────────────

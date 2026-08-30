@@ -29,7 +29,9 @@ function ridge_labs_assets() {
         [], null);
 
     wp_enqueue_style('ridge-labs-main', $uri . '/assets/css/styles.css', ['google-fonts'], $ver);
-    wp_enqueue_script('ridge-labs-theme', $uri . '/assets/js/theme.js', [], $ver, true);
+    $js_path = get_template_directory() . '/assets/js/theme.js';
+    $js_ver  = file_exists($js_path) ? filemtime($js_path) : $ver;
+    wp_enqueue_script('ridge-labs-theme', $uri . '/assets/js/theme.js', [], $js_ver, true);
 
     // WooCommerce skin — load only on store pages, after WC's own stylesheet.
     if (function_exists('is_woocommerce') &&
