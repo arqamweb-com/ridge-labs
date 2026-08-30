@@ -981,23 +981,19 @@ get_header();
           <div class="relative grid grid-cols-2 gap-px bg-border rounded-3xl overflow-hidden border border-border"
                style="box-shadow:0 6px 20px rgba(0,0,0,0.04)">
             <div class="bg-background p-8 hover:bg-surface transition-colors duration-500 group">
-              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span>0
-                  <!-- -->+</span></div>
+              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span data-count data-target="200" data-suffix="+">200+</span></div>
               <div class="mt-3 text-sm text-muted-foreground leading-snug">Real-world projects delivered</div>
             </div>
             <div class="bg-background p-8 hover:bg-surface transition-colors duration-500 group">
-              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span>0
-                  <!-- -->×</span></div>
+              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span data-count data-target="10" data-suffix="×">10×</span></div>
               <div class="mt-3 text-sm text-muted-foreground leading-snug">Faster modeling time</div>
             </div>
             <div class="bg-background p-8 hover:bg-surface transition-colors duration-500 group">
-              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span>&lt;
-                  <!-- -->0<!-- -->h</span></div>
+              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span data-count data-target="1" data-prefix="&lt;" data-suffix="h">&lt;1h</span></div>
               <div class="mt-3 text-sm text-muted-foreground leading-snug">License delivery time</div>
             </div>
             <div class="bg-background p-8 hover:bg-surface transition-colors duration-500 group">
-              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span>0
-                  <!-- -->/7</span></div>
+              <div class="font-display text-5xl sm:text-6xl font-semibold text-gradient-primary tracking-tight"><span data-count data-target="24" data-suffix="/7">24/7</span></div>
               <div class="mt-3 text-sm text-muted-foreground leading-snug">Engineering support</div>
             </div>
           </div>

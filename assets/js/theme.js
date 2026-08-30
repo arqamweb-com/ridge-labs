@@ -266,8 +266,9 @@
 
   // ── Animated Counter ──────────────────────────────────────────
   function animateCount(el) {
-    const target = parseFloat(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
+    const target  = parseFloat(el.dataset.target);
+    const prefix  = el.dataset.prefix || '';
+    const suffix  = el.dataset.suffix || '';
     const isFloat = String(el.dataset.target).includes('.');
     const duration = 1800;
     const start = performance.now();
@@ -276,7 +277,8 @@
       const progress = Math.min((now - start) / duration, 1);
       const ease = 1 - Math.pow(1 - progress, 4);
       const val  = target * ease;
-      el.textContent = (isFloat ? val.toFixed(1) : Math.floor(val)) + suffix;
+      el.textContent =
+        prefix + (isFloat ? val.toFixed(1) : Math.floor(val)) + suffix;
       if (progress < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -307,7 +309,8 @@
         el.dataset.suffix = el.dataset.suffix || el.textContent.replace(/[\d.,]/g, '');
       }
       const zero = String(el.dataset.target).includes('.') ? '0.0' : '0';
-      el.textContent = zero + (el.dataset.suffix || '');
+      el.textContent =
+        (el.dataset.prefix || '') + zero + (el.dataset.suffix || '');
       counterIO.observe(el);
     });
   }
